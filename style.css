@@ -1,0 +1,134 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-size: 13px;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    background-color: var(--light-grayish-blue);
+}
+
+main{
+    width: 100%;
+    min-height: calc(100lvh - 2rem);
+    padding: 1rem 0rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#grid-container{
+    width: min(95%, 70rem);
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, auto);
+}
+
+.card{
+    padding: 2rem;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.card:nth-child(1){
+    position: relative;
+    grid-column: span 2;
+    background: url(images/bg-pattern-quotation.svg) 80% 0%/20% no-repeat;
+    background-color: var(--moderate-violet);
+}
+
+.card:nth-child(2){
+    background-color: var(--very-dark-grayish-blue);
+}
+
+.card:nth-child(3){
+    grid-row: span 2;
+    background-color: var(--white);
+}
+
+.card:nth-child(3) .special-text{
+    color: var(--very-dark-blackish-blue);
+}
+
+.card:nth-child(3) .dude .name{
+    color: var(--very-dark-blackish-blue);
+}
+
+.card:nth-child(4){
+    background-color: var(--white);
+}
+
+.card:nth-child(4) .special-text{
+    color: var(--very-dark-blackish-blue);
+}
+
+.card:nth-child(4) .dude .name{
+    color: var(--very-dark-blackish-blue);
+}
+
+
+.card:nth-child(5){
+    grid-column: 2/span 2;
+    background-color: var(--very-dark-blackish-blue);
+}
+
+.dude{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.dude img{
+    width: 2rem;
+    border-radius: 50%;
+}
+
+.dude .name{
+    color: var(--white);
+}
+
+.dude .special-info{
+    color: var(--light-gray);
+    font-size: .85em;
+}
+
+.text{
+    color: var(--light-gray);
+}
+
+.text .special-text{
+    color: var(--white);
+    font-size: 1.6em;
+}
+
+@media screen and (max-width: 1024px){
+    #grid-container{
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(5, auto);
+    }
+
+    .card:nth-child(1){
+        grid-column: span 4;
+    }
+
+    .card:nth-child(2){
+        grid-column: span 4;
+    }
+
+    .card:nth-child(3){
+        grid-column: span 4;
+        grid-row: 5/span 1;
+    }
+
+    .card:nth-child(4){
+        grid-column: span 4;
+    }
+
+    .card:nth-child(5){
+        grid-column: span 4;
+    }
+}
